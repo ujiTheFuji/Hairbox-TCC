@@ -1,0 +1,99 @@
+.container{
+    margin: 0 5em;
+}
+
+.title{
+    font-family: 'century gothic';
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.content-list{
+    width: 75%;
+    margin: 0 auto;
+    text-indent: 5px;
+}
+
+.content-item{
+    background-color: rgba(248, 165, 194,.2);
+    position: relative;
+}
+
+.content-title:after{
+    content: '';
+    position: absolute;
+    top: 12.5px;
+    right: -5px;
+    transform: translateY(0);
+    width: 1px;
+    height: 1px;
+    border-color: transparent transparent transparent #1e272e;
+    border-style: solid;
+    border-width: 10px 15px 10px 15px;
+    transition: 0.1s all;
+}
+
+.active.content-title:after{
+    right: 10px;
+    transform: translateY(5px);
+    border-color: #1e272e transparent transparent transparent;
+    border-width: 15px 10px 15px 10px;
+}
+.content-item:nth-child(even) .content-title{
+    background-color: #FFF;
+}
+.content-title{
+    font-family: 'century gothic';
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 30px 10px 10px;
+    background-color: rgba(248, 165, 194,0.3);
+    cursor: pointer;
+    border: 2px solid rgba(248, 165, 194,.2);
+}
+
+.item-desc{
+    display: none;
+    padding: 15px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+
+@media screen and (max-width:1281px){
+    .content-list{
+        width: 85%;
+    }
+    .container{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:850px){
+    .content-list{
+        width: 95%;
+    }
+    .content-title{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:625px){
+    .title{
+        font-size: 30px;
+    }
+    .content-list{
+        width: 97.5%;
+        margin-bottom: 25px;
+    }
+
+    .content-title{
+        text-align: center;
+    }
+
+    .item-desc{
+        font-size: 15px;
+    }
+}

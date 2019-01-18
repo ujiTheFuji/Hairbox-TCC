@@ -1,0 +1,388 @@
+.title-how-works{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'century gothic';
+  text-transform: uppercase;
+}
+.work-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.work-steps{
+  display: inline-flex;
+  width: 300px;
+  margin: 25px;
+  flex-wrap: wrap;
+}
+
+.work-image{
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 300px;
+}
+
+.work-steps:nth-child(1) .work-image{
+  background-image: url(../img/mexendo_pc.png);
+}
+.work-steps:nth-child(2) .work-image{
+  background-image: url(../img/pagando.png);
+}
+
+.work-steps:nth-child(3) .work-image{
+  background-image: url(../img/segurando_caixa.png);
+}
+
+.work-text{
+  font-size: 25px;
+  text-align: center;
+}
+
+
+#plans{
+  background-color: #FFC0CB;
+  padding-bottom: 50px;
+}
+
+.title-plans{
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'century gothic';
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 25px 0;
+}
+
+.kind-group{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.kind-container{
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  margin: 25px;
+  opacity: 0;
+  position: relative;
+}
+
+/* hover */
+.activate .kind-card{
+  -webkit-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.kind-front:after{
+  content: 'Mais detalhes';
+  position: absolute;
+  transition: 0.5s all;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  text-align: center;
+  font-family: 'century gothic';
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.kind-container:hover .kind-front:after{
+  opacity: 1;
+  padding: 5px 0;
+}
+.kind-card {
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.kind-front, .kind-back{
+  width: 280px;
+  height: 350px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: inline-flex;
+  position: relative;
+}
+
+.kind-front{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/plano1.jpg);
+  cursor: pointer;
+}
+
+.kind-container:nth-child(2) .kind-front{
+  background-image: url(../img/plano2.jpg);
+}
+
+.kind-container:nth-child(3) .kind-front{
+  background-image: url(../img/plano3.jpg);
+}
+
+.kind-container:nth-child(4) .kind-front{
+  background-image: url(../img/plano4.jpg);
+}
+.kind-back{
+  position: absolute;
+  background-color: #FFF;
+  left: 0;
+  top: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  cursor: default;
+  display: block;
+}
+
+.plan-title{
+  text-align: center;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 25px;
+  padding: 10px 0;
+  font-size: 25px;
+  font-family: 'century gothic';
+}
+
+.plan-item{
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  font-family: 'century gothic';
+  font-size: 25px;
+}
+
+.plan-renov{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 550;
+}
+.plan-price{
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: 'century gothic';
+  color: #db7093;
+}
+.plan-discount{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #db7093;
+}
+.plan-link{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 25px;
+  background-color: #db7093;
+  width: 50%;
+  margin: 10px auto 0;
+  font-size: 30px;
+  color: #FFF;
+  transition: 0.3s all;
+}
+
+.plan-link:hover{
+  transform: scale(1.1) translateY(-2.5px);
+}
+.animate:nth-child(1){
+  animation: 1s showUp forwards;
+}
+.animate:nth-child(2){
+  animation: 2s showUp forwards;
+}
+.animate:nth-child(3){
+  animation: 3s showUp forwards;
+}
+.animate:nth-child(4){
+  animation: 4s showUp forwards;
+}
+
+@keyframes showUp{
+  0%{
+    top: 150px;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100%{
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width:1300px){
+  .kind-front, .kind-back{
+    width: 215px;
+    height: 269px;
+  }
+
+  .plan-item{
+    font-size: 22px;
+  }
+  .plan-renov{
+    font-size: 17px;
+    margin-top: 20px;
+  }
+  .plan-price{
+    font-size: 21px;
+    margin-top: 10px;
+  }
+  .plan-link{
+    margin: 10px auto 0;
+  }
+}
+
+@media screen and (max-width:1060px){
+  .kind-front, .kind-back{
+    width: 185px;
+    height: 231px;
+  }
+
+  .plan-title{
+    font-size: 22px;
+  }
+  .plan-item{
+    font-size: 20px;
+    margin: 0;
+  }
+  .plan-renov{
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .plan-price{
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .plan-link{
+    padding: 2.5 20px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width:940px){
+  .kind-front, .kind-back{
+    width: 280px;
+    height: 350px;
+  }
+
+  .plan-title{
+  text-align: center;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 25px;
+  padding: 10px 0;
+  font-size: 25px;
+  font-family: 'century gothic';
+}
+
+.plan-item{
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  font-family: 'century gothic';
+  font-size: 25px;
+}
+
+.plan-renov{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 550;
+}
+.plan-price{
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: 'century gothic';
+  color: #db7093;
+}
+.plan-discount{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #db7093;
+}
+.plan-link{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 25px;
+  background-color: #db7093;
+  width: 50%;
+  margin: 10px auto 0;
+  font-size: 30px;
+  color: #FFF;
+  transition: 0.3s all;
+}
+
+
+}
+
+.btn-control{
+  width: 90%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+}
+
+.btn-login{
+  padding: 25px;
+  background-color: #FFC0CB;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.3s all;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-login:hover{
+  background-color: #fff;
+  color: #FFC0CB;
+}
+
+
+@media screen and (max-width:1090px){
+  .btn-control{
+      justify-content: flex-end;
+      width: 100%;
+      height: 35%;
+  }
+}
+@media screen and (max-width:900px){
+  .btn-control{
+      justify-content: center;
+  }
+  .btn-login{
+      font-size: 30px;
+      padding: 15px;
+  }
+}

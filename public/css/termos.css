@@ -1,0 +1,31 @@
+.title{
+    text-align: center;
+    font-family: 'century gothic';
+    font-size: 40px;
+}
+
+.container{
+    margin: 0 5em;
+}
+.content-term{
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 22px;
+}   
+
+@media screen and (max-width:768px){
+    .content-term{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:550px){
+    .container{
+        margin: 0 10px;
+    }
+
+    .content-term{
+        font-size: 15px;
+    }
+}

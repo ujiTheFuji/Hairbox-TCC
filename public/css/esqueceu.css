@@ -1,0 +1,158 @@
+body{
+    background-color: rgba(211, 121, 118, 0.7);
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.container-abs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+.input-group{
+  width: 75%;
+  margin: 25px auto;
+  text-align: center;
+  position: relative;
+}
+.form-label{
+  position: absolute;
+  color: #636e72;
+  transition: 0.3s all;
+  cursor: text;
+}
+
+.activated .form-label,
+.fill .form-label,
+.error .form-label
+{
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  margin-left: -15px;
+  color: #FFC0CB;
+  font-size: 18px;
+  cursor: default;
+}
+.form-inputo{
+  border: none;
+  border-bottom: 1px solid #636e72;
+  outline: none;
+  width: 80%;
+  font-size: 18px;
+}
+
+.error .form-label{
+  color: #e74c3c;
+  font-size: 20px;
+}
+
+.red{
+  color: #e74c3c;
+  position: relative;
+  top: -10px;
+  text-align: center;
+}
+.input-group:before,
+.input-group:after
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFC0CB;
+  transition: 0.3s all;
+}
+
+.error:before,
+.error:after{
+  background-color: #e74c3c;
+}
+.input-group:before{
+  left: 50%;
+}
+
+.input-group:after{
+  right: 50%;
+}
+
+.activated.input-group:before,
+.activated.input-group:after,
+.fill.input-group:before,
+.fill.input-group:after,
+.error.input-group:before,
+.error.input-group:after
+{
+    width: 40%;
+}
+
+.btn-form{
+    width: 40%;
+    font-size: 20px;
+    background-color: #FFC0CB;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s all;
+    padding: 7.5px;
+}
+
+.btn-form:hover{
+    background-color: rgb(250, 171, 185);
+}
+.form{
+    text-align: center;
+    padding: 25px;
+}
+
+.input-group[data-js="req-newPass"]{
+    display: none;
+}
+
+@media screen and (max-width:1281px){
+    .input-group{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .title{
+        font-size: 30px;
+    }
+    .container{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:515px){
+    .form{
+        padding: 0;
+        padding-top: 25px;
+    }
+
+    .container{
+        border-radius: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 0;
+    }
+
+    .title{
+        font-size: 25px;
+    }
+}

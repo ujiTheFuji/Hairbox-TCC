@@ -1,0 +1,139 @@
+.content-alert{
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 70px;
+}
+
+.container-alert{
+    background-color: rgba(255, 192, 203, .8);
+    padding: 15px 50px 15px 25px;
+    border-radius: 5px;
+    max-width: 300px;
+    color: #000;
+    position: relative;
+    margin-bottom: 10px;
+}
+.close-alert:after, .close-alert:before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 3px;
+    height: 20px;
+    background-color: #000;
+    transform: translateX(-50%) rotateZ(-45deg);
+}
+
+.close-alert{
+    position: absolute;
+    top: 7.5px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.close-alert:hover{
+    background-color: rgb(245, 161, 175);
+    transform: scale(1.1);
+    transition: 0.3s all;
+}
+.close-alert:before{
+    transform: translateX(-50%) rotateZ(45deg);
+}
+
+.animation-alert .content-alert .container-alert{
+    animation: smoothAlert ease-in-out 1s forwards;
+}
+
+@keyframes smoothAlert{
+    0%{
+        transform: translateX(100%);
+    }
+
+    50%{
+        transform: translateX(-10%);
+    }
+
+    75%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.content-submit-alert{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+    display: none;
+}
+
+.submit-alert{
+    width: 50%;
+    background-color: #FFF ;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+}
+
+.message-submit-alert{
+    font-size: 25px;
+    font-family: 'century gothic';
+    text-align: center;
+}
+
+.next-submit-alert{
+    width: 15%;
+    color: #2d3436;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(248, 178, 190);
+    text-align: center;
+    margin: 25px auto;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s all;
+    display: block;
+    text-decoration: none;
+}
+
+.next-submit-alert:hover{
+    background-color: rgb(255, 192, 203);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.animate-submit-alert{
+    width: 175px;
+    height: 175px;
+    border-radius: 100%;
+    border: 5px solid rgb(245, 161, 175);
+    margin: 25px auto;
+    position: relative;
+    animation: smoothImage 1.5s ease-in-out forwards;
+    background-size: cover;
+    background-image: url(../img/cadastro.png);
+}
+
+
+@keyframes smoothImage{
+    0%{
+        background-position: bottom
+    }
+
+    100%{
+        background-position: center;
+    }
+}
+
