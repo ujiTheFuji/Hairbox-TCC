@@ -2,13 +2,13 @@
 <br/>
 <p align="justify"> A Hairbox é um projeto desenvolvido de um website responsivo e-commerce voltado para produto para cabelo, no qual foi demonstrado no trabalho de conclusão de curso (TCC) da escola ETEC de Santa Isabel </p> <br/>
 
-  <h2> Demonstrando o projeto passo a passo </h2> <br/>
-  <h4> Requisitos para serem instalados </h4> <br/>
+<h2> Requisitos para serem instalados </h2> <br/>
   <ol>
     <li> Composer </li>
     <li> NPM (node package module) </li>
     <li> XAMPP </li>
   </ol>
+<h2> Demonstrando o projeto passo a passo </h2> <br/>
 <ol>
   <li> Posteriormente, crie um database chamado "hairbox" em seu SGBD </li>
    <li> Após o download do repositório, use o comando "npm install" para que possa instalar todos os módulos que o Laravel fornece (node_modules)</li>
