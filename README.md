@@ -1,51 +1,39 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<center><h1>Hairbox</h1></center>
+<br/>
+<p align="justify"> A Hairbox é um projeto desenvolvido de um website responsivo e-commerce voltado para produto para cabelo, no qual foi demonstrado no trabalho de conclusão de curso (TCC) da escola ETEC de Santa Isabel </p> <br/>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+<center>
+  <h2> Demonstrando o projeto passo a passo </h2> <br/>
+  <h4> Requisitos para serem instalados </h4> <br/>
+  <ol>
+    <li> Composer </li>
+    <li> NPM (node package module) </li>
+    <li> XAMPP </li>
+  </ol>
+</center>
+<ol>
+  <li> Posteriormente, crie um database chamado "hairbox" em seu SGBD </li>
+   <li> Após o download do repositório, use o comando "npm install" para que possa instalar todos os módulos que o Laravel fornece (node_modules)</li>
+  <li> Em seguida, no mesmo diretório do repositório, use os seguintes comandos: 
+    <ul>
+      <li> php artisan migrate </li>
+      <li> php artisan db:seed </li>
+      <li> php artisan storage:link </li>
+      <li> php artisan serve </li>
+    </ul>
+  </li>
+  <li> E finalmente, você poderá acessar o site na URL: "localhost:8000" </li>
+</ol>
+<br/>
+<center><h2> Observações </h2></center>
+<br/>
+<ol>
+  <li> Caso seu banco de dados tenha alguma senha para poder acessa-lo, terá que alterar no arquivo ".ENV" e colocar a senha em "DB_PASSWORD=" </li> 
+  <li> No site há uma conta para a administração, no qual é acessado pelo mesmo local de login que os usúarios normais, segue os dados da conta administrador:
+      <ul>
+        <li><b>Email:</b>hairbox@gmail.com</li>
+        <li><b>Senha:</b>fejuluma</li>
+      </ul>
+  </li>
+</ol>
