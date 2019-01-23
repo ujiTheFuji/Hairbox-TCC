@@ -140,6 +140,12 @@ class AdminController extends Controller
         return $prod;
     }
     
+    public function editEtapa(Request $req){
+        $correio = Correio::find($req->input('id'));
+        $correio->etapa = $req->etapa;
+        $correio->save();
+        return $correio->etapa;
+    }
     public function store(Request $req){
         $prod = new Produto();
         $prod->nome_prod = $req->input('nome');
@@ -154,4 +160,5 @@ class AdminController extends Controller
         $image->imagem_dois = $req->file('imagem_dois')->store('imagens', 'public');
         $image->save();
     }
+
 }

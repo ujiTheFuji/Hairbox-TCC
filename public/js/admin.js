@@ -70,7 +70,7 @@ function makeStructure(data, table) {
             '<td>' + data.rua + '</td>' +
             '<td>' + data.numero + '</td>' +
             '<td>' + data.complemento + '</td>' +
-            '<td>' + data.etapa + '</td>' + //select depois..
+            '<td class="selected-step">' + data.etapa + '</td>' + //select depois..
         '</tr>';;
     }
     else if(table == 'usuarios'){
@@ -381,6 +381,66 @@ function addItem(){
     $('#btn-add').on('click', addAjax);
     $('.file').on('change', loadValue);
 }
+
+function cancelStep(e = null, texto = null){
+    if(texto == null)
+        var text = localStorage.getItem('step')
+    else
+        var text = texto;
+
+    if( this.id == 'cancelar-correio' || e == 'salvar')
+        $('.btn-group-correio').fadeOut(0);
+
+    $('.selected-step').find('.selected').parent().text(text);
+    localStorage.removeItem('step');
+}
+function stepEdit(){
+    function saveStep() {
+        var datas = {
+            id: idStep,
+            etapa: $('.selected').val()
+        };
+
+        $.ajax({
+            type: 'patch',
+            url: 'api/admin/etapa',
+            context: this,
+            data: datas,
+            success: function (data) {
+                cancelStep('salvar', data);
+            },
+            error: function (error) {
+                console.error(error)
+            }
+        })
+
+    }
+
+    if( $(this).children().length != 0)
+        return;
+    
+    if(!$('.btn-group-correio').is(':visible'))
+        $('.btn-group-correio').fadeIn('slow');
+
+    if( $('.selected-step').children().length != 0)
+        cancelStep();
+
+
+    var idStep = $(this).parent().children()[0].textContent;
+    var steps = ['Em verificação', 'A caminho', 'Entregue'];
+    localStorage.setItem('step', this.textContent);
+    var text = localStorage.getItem('step');
+    var resul = steps.join().replace( text + ',', '').split(',')
+    this.textContent = '';
+    $(this).append(
+    '<select class="selected">' + 
+        '<option value="' + text + '">' + text + '</option>' +
+        '<option value="' + resul[0] + '">' + resul[0] + '</option>' +
+        '<option value="' + resul[1] + '">' + resul[1] + '</option>' +
+    '</select>')
+    
+    $('#salvar-correio').on('click', saveStep);
+}
 function unlockBtn(){
     var bool = false;
     $('.input-add').each( (i,e) =>{
@@ -398,9 +458,10 @@ $(document).ready(function(){
     $('.lupe').on('click', submitAjax);
     $('#add').on('click', addItem);
     $('.input-add').on('keyup change', unlockBtn );
+    $('#cancelar-correio').on('click', cancelStep);
     $(document).on('click','.btn-exc', itemDelete);
     $(document).on('click', '.btn-edit' , itemEdit );
-
+    $(document).on('click', '.selected-step', stepEdit);
     $(window).on('resize', adminWindow);
     $(function () {
         adminWindow();  

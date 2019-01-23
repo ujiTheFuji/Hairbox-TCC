@@ -28,3 +28,4 @@ Route::post('/admin', 'AdminController@search');
 Route::post('/admin/inserir', 'AdminController@store');
 Route::delete('/admin/{table}/{id}', 'AdminController@destroy');
 Route::patch('/admin/produto', 'AdminController@edit');
+Route::patch('/admin/etapa', 'AdminController@editEtapa');

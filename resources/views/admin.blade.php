@@ -70,7 +70,7 @@
             <table id="table-correios" class="table-modal">
                 <thead>
                     <tr>
-                        <td colspan="12">
+                        <td colspan="12" style="position: relative;">
                             <div class="input-group">
                                 <input type="text" class="input-form" placeholder="Buscar...">
                                 <button class="lupe lupe-off"></button>
@@ -86,6 +86,10 @@
                                 <option value="etapa">Etapa</option>
                             </select>
                             <span class="tooltip-desc">Pesquisar por</span>
+                            <div class="btn-group-correio">
+                                <button class="btn-modal btn-correio" id="cancelar-correio">Cancelar</button>
+                                <button class="btn-modal btn-correio" id="salvar-correio">Salvar</button>
+                            </div>
                         </td>
                     </tr>
                     <tr>

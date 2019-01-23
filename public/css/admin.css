@@ -425,3 +425,28 @@ tfoot tr td{
 input[type="file"]{
     display: none;
 }
+
+.selected-step:hover{
+    background-color: rgba(0,0,0,.5);
+    cursor: pointer;
+    color: #FFF;
+}
+
+.selected{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+}
+
+.btn-group-correio{
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.btn-correio{
+    padding: 5px;
+    border-radius: 5px;
+}
